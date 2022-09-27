@@ -81,7 +81,6 @@ Vehicle:
 ````
 
 ## Advanced
----
 `GET /vehicles` JSON response format:
 1. Filter by make, e.g. return all vehicles manufactured by Tesla.
 ````
@@ -106,7 +105,12 @@ Vehicle:
 
 
 ## Set up
----
+You will need to fork this repo. Clone the forked repo to your local machine. Push your changes to your repo.
+
+### Installing
+`bundle install`
+
+You will need ruby version: 2.7.3
 ### A migration file is provided:
   * `db/migrate/20220927165948_create_vehicles.rb`
 
@@ -115,17 +119,16 @@ You can make changes to this file or if you want to create your own, then remove
 Once migration is ready run: `rails db:migrate` to run your migration files
 
 ### Routes
-Route has been configured, you can view the defines routes by running: `rails routes`
+Route has been configured, you can view the defined routes by running: `rails routes`
 
 ### Test
 Tests has also been set up. Will not be assessed on testing.
 
 ### Running your API
-Running rails server: `rails s` \
+Running rails server: `rails s`
 
 It will run on: `localhost:3000`
 
-You can visit the link above with the path e.g. `localhost:3000/vehicles`\
+You can visit the link above with the path e.g. `localhost:3000/vehicles`
 
-Recommend using Postman for hitting your API
-
+Recommend using Postman for testing your API
