@@ -1,1 +1,1 @@
-json.partial! "vehicles/vehicle", vehicle: @vehicle
+# TODO: return vehicle fields

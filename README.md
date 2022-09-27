@@ -129,6 +129,4 @@ Running rails server: `rails s`
 
 It will run on: `localhost:3000`
 
-You can visit the link above with the path e.g. `localhost:3000/vehicles`
-
-Recommend using Postman for testing your API
+Recommend using Postman for testing your API.
