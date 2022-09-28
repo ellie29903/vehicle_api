@@ -141,4 +141,4 @@ curl http://localhost:3000/vehicles/1
 ````
 
 ### Assumptions
-- Add your assumptions here
+- A user will not update a record to be the same as an exisiting record
