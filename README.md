@@ -14,6 +14,9 @@ Vehicle:
 - max range in miles
 ````
 
+Note: The vehicle record should be unique. e.g. Tesla Model 3 2021 should only be stored once.
+
+Add your assumptions at the end of this file.
 ### Endpoints
 ---
 `GET /vehicles` JSON response format:
@@ -130,3 +133,6 @@ Running rails server: `rails s`
 It will run on: `localhost:3000`
 
 Recommend using Postman for testing your API.
+
+### Assumptions
+- Add your assumptions here
