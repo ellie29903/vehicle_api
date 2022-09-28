@@ -134,5 +134,11 @@ It will run on: `localhost:3000`
 
 Recommend using Postman for testing your API.
 
+Or you can hit your API via curl command:
+
+````
+curl http://localhost:3000/vehicles/1
+````
+
 ### Assumptions
 - Add your assumptions here
