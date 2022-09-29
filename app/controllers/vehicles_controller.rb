@@ -2,7 +2,11 @@ class VehiclesController < ApplicationController
   # GET /vehicles
   def index
     # TODO: return all vehicles
-    vehicles = Vehicle.order('created_at DESC').page(params[:page]).per(params[:per])
+    if params[:make].nil?
+      vehicles = Vehicle.order('created_at DESC').page(params[:page]).per(params[:per])
+    else
+      vehicles = Vehicle.order('created_at DESC').where(make: params[:make]).page(params[:page]).per(params[:per])
+    end 
     render json: {data:vehicles}
   end
 
