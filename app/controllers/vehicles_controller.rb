@@ -2,6 +2,10 @@ class VehiclesController < ApplicationController
   # GET /vehicles
   def index
     # TODO: return all vehicles
+    # params: 
+    #   make -> filter by make of car eg 'Tesla'
+    #   page -> set the page to view
+    #   per -> set the number of records per page
     if params[:make].nil?
       vehicles = Vehicle.order('created_at DESC').page(params[:page]).per(params[:per])
     else
@@ -20,10 +24,9 @@ class VehiclesController < ApplicationController
   # POST /vehicles
   def create
     # TODO: create vehicle
-
+    # Check if new record is duplicate of existing 
     if !(Vehicle.exists?(make: params[:make], model: params[:model], year: params[:year]))
       vehicle = Vehicle.new(vehicle_params)
-
       if vehicle.save
         render json: {data:vehicle}
       else
@@ -49,20 +52,12 @@ class VehiclesController < ApplicationController
   def update
     # TODO: update vehicle
     vehicle = Vehicle.find(params[:id])
-
     if vehicle.update(vehicle_params)
       render json: {data:vehicle}
     else
       render json: {data:vehicle.errors}
     end
   end
-
-
-  def filter 
-    # TODO: return filtered vehicles
-    vehicles = Vehicle.find(params[:make])
-    render json: {data:vehicles}
-  end 
   
   private
 
