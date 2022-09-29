@@ -2,7 +2,7 @@ class VehiclesController < ApplicationController
   # GET /vehicles
   def index
     # TODO: return all vehicles
-    vehicles = Vehicle.order('created_at DESC')
+    vehicles = Vehicle.order('created_at DESC').page(params[:page]).per(params[:per])
     render json: {data:vehicles}
   end
 
